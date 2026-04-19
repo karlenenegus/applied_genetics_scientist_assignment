@@ -1,0 +1,62 @@
+### File paths
+
+paths:
+  input_data: ./data/input_data
+  output_data: ./data/output_data
+  models: ./data/models
+  logs: ./logs
+
+### Files
+
+files:
+
+  input:
+    genotype_data:
+      file_name: cucumber_genotypes.csv
+      separator: ','
+      genotype_id_column: genotype
+      marker_columns_prefix: snp_
+    phenotype_data:
+      file_name: cucumber_phenotypes.csv
+      separator: ','
+      genotype_id_column: genotype
+      trait_columns: yield, weight
+      location_columns: latitude, longitude, year
+    environment_data:
+      file_name: cucumber_environment.csv
+      separator: ','
+      location_columns: latitude, longitude, year
+      environment_variable_columns: temp, humidity, co2_ppm, soil_ec, irrigation_ml
+    combined_data:
+      file_name: cucumber_combined.csv
+      separator: ','
+      genotype_id_column: genotype
+      trait_columns: yield, weight
+      location_columns: latitude, longitude, year
+      environment_variable_columns: temp, humidity, co2_ppm, soil_ec, irrigation_ml
+
+  output:
+    metrics:
+      file_name: metrics.json
+      format: json
+    plots:
+      file_name: plots.png
+      format: png
+    summary:
+      file_name: feature_summary.csv
+      format: csv
+    models:
+      file_name: models.pkl
+      format: pkl
+
+merge:
+  on: sample_id
+  how: inner
+  suffixes: _genotype, _phenotype, _environment
+
+
+### Logging
+
+logging:
+  level: DEBUG # DEBUG, INFO, WARNING, ERROR
+  output: both # console, file, both
