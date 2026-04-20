@@ -33,7 +33,7 @@ micromamba activate assignment
 Or alternatively using conda:
 
 ```bash
-conda create -n assignment -f environment.yaml
+conda create -y -n assignment -f environment.yaml
 conda activate assignment
 ```
 
