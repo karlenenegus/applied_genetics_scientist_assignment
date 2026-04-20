@@ -1,0 +1,32 @@
+{
+    "genotype_data": {
+        "rows": 5000,
+        "columns": 1000,
+        "total_missing_values": 0,
+        "columns_with_missing_values": 0,
+        "dtype_counts": {
+            "str": 1000
+        },
+        "converted_mixed_types": false
+    },
+    "phenotype_data": {
+        "rows": 5000,
+        "columns": 1,
+        "total_missing_values": 0,
+        "columns_with_missing_values": 0,
+        "dtype_counts": {
+            "float64": 1
+        },
+        "converted_mixed_types": false
+    },
+    "environment_data": {
+        "rows": 5000,
+        "columns": 30,
+        "total_missing_values": 0,
+        "columns_with_missing_values": 0,
+        "dtype_counts": {
+            "float64": 30
+        },
+        "converted_mixed_types": false
+    }
+}

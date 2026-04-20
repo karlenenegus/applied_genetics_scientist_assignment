@@ -1,12 +1,17 @@
 name: assignment
 channels:
   - conda-forge
-  - defaults
+  - bioconda
+  - r
 dependencies:
-  - python=3.12
+  - python=3.11
   - numpy
   - pandas
   - pyyaml
   - matplotlib
   - scipy
   - seaborn
+  - scikit-learn
+  - r-base
+  - r-rrblup
+  - rpy2
