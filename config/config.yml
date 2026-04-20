@@ -1,0 +1,37 @@
+### File paths
+
+paths:
+  input_data: ./data/input
+  output_data: ./data/output
+  models: ./data/models
+  logs: ./logs
+
+### Files
+
+files:
+  input:
+    combined_data:
+      file_name: cucumber_yield_raw_genotypes(in).csv
+      separator: ','
+      genotype_id_column: None
+      trait_columns: cucumber_weight
+      environment_variable_columns: ['temp_1', 'temp_2', 'temp_3', 'temp_4', 'temp_5', 'humidity_1', 'humidity_2', 'humidity_3', 'humidity_4', 'humidity_5', 'co2_ppm_1', 'co2_ppm_2', 'co2_ppm_3', 'co2_ppm_4', 'co2_ppm_5', 'light_hours_1', 'light_hours_2', 'light_hours_3', 'light_hours_4', 'light_hours_5', 'soil_ec_1', 'soil_ec_2', 'soil_ec_3', 'soil_ec_4', 'soil_ec_5', 'irrigation_ml_1', 'irrigation_ml_2', 'irrigation_ml_3', 'irrigation_ml_4', 'irrigation_ml_5']
+      marker_columns_prefix: snp_
+
+merge:
+  on: sample_id
+  how: inner
+  suffixes: _genotype, _phenotype, _environment
+
+
+### Logging
+
+logging:
+  level: WARNING
+  output: both
+
+### Validation
+
+validation:
+  split_ratio: 0.2
+  random_state: 42
