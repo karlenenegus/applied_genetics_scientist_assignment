@@ -2,7 +2,7 @@
 
 ## Applied Genetics Scientist Assignment
 
-Take-home assignment for the Applied Genetics Scientist position. Includes exploratory data analysis, data preprocessing, feature extraction, and prediction modeling.
+Take-home assignment for the Applied Genetics Scientist position. Includes exploratory data analysis, data preprocessing, feature extraction, and prediction modeling. Completed in 5.5 hours.
 
 ## Project Explanation
 
